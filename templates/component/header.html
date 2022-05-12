@@ -1,0 +1,41 @@
+{% extends "component/base.html" %}
+{% load static %}
+
+{% block extra_head %}
+	<link rel="stylesheet" href="{% static 'css/index.css' %}">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block page_content %}
+	<div class="contents_wrap" style="height: 910px;">
+		
+		<div class="header">
+			<a class="logo_area" href="/main">
+				<img class="header_image" src="{% static 'image/index/badanamu-logo.png' %}" alt="">
+				<p class="header_title">Bada Kinder</p>
+			</a>
+			<div class="header_right">
+				<!-- <div class="header_tel">
+					<img class="tel_icon" src="static/image/index/icon-phone.png" alt="">
+					02-6480-7919
+				</div> -->
+				<div class="user_login">
+					<img class="user_image" src="{% static 'image/index/icon-thumb.png' %}" alt="">
+					<span class="text_strong">Selamat Datang</span>
+					<a href="{% url 'login' %}" class="float-right btn btn-outline-primary mt-1">Log out</a>
+					<br>di Banda Kider Teacher
+				</div>
+			</div>
+		</div>
+        
+
+		{% block sidebar %}
+		{% endblock %}
+
+		{% block content %}
+		{% endblock %}
+
+			<div style="float: left; margin-left: 20px;">Copyright © 2021 by KidsLoop Co.,Ltd. All Rights Reserved.</div>
+		</div>
+	</div>
+{% endblock %}
