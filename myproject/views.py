@@ -5,9 +5,8 @@ from django.contrib.auth.decorators import login_required
 class Login(LoginView):
     template_name = 'login.html'
 
-@login_required(login_url='')
-def Main(request):
-        return render(request,'main.html')
+class Main(LoginView):
+    template_name ='main.html'
 
 class LevelA(TemplateView):
     template_name = "level/A/index.html"
